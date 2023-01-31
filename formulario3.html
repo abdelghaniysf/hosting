@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-secondary">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <a href="#" class="nav-link disabled">
+                        <h3>Client Data</h3>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link disabled">
+                        <h3>Additional information</h3>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link active">
+                        <h3>Order</h3>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="nav-link">
+                        <h3>Payment Data</h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container text-white" style="padding-bottom: 300px;">
+        <form action="formulario4.html" method="post" class="mt-5">
+            <h2>Order</h2>
+            <br>
+            <table class="table table-hover bg-danger">
+                <thead class="table-active">
+                    <th></th>
+                    <th class="text-dark text-center">Hashish</th>
+                    <th class="text-dark text-center">Weed</th>
+                    <th class="text-dark text-center">Kush</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-info text-center">Weight</td>
+                        <td class="text-center">10g</td>
+                        <td class="text-center">5g</td>
+                        <td class="text-center">20g</td>
+                    </tr>
+                    <tr>
+                        <td class="text-info text-center">Quantity</td>
+                        <td class="text-center"><input type="number" max="10" min="0" id="num1" required></td>
+                        <td class="text-center"><input type="number" max="20" min="0" id="num2" required></td>
+                        <td class="text-center"><input type="number" max="5" min="0" id="num3" required></td>
+                    </tr>
+                    <tr>
+                        <td class="text-info text-center">Quality</td>
+                        <td class="text-center">Good</td>
+                        <td class="text-center">Medium</td>
+                        <td class="text-center">Supreme</td>
+                    </tr>
+                    <tr>
+                        <td class="text-info text-center">Price</td>
+                        <td class="text-center">8$/g</td>
+                        <td class="text-center">20$/g</td>
+                        <td class="text-center">30$/g</td>
+                    </tr>
+                    <tr>
+                        <td class="text-secondary text-center"></td>
+                        <td class="img img-fluid text-center"><img style="height: 180px;width: 290px;"
+                                src="../img/heartland-hashish-effects.jpg" alt=""></td>
+                        <td class="img img-fluid text-center"><img style="height: 180px;width: 280px;"
+                                src="../img/1200px-Macro_cannabis_bud.jpg" alt=""></td>
+                        <td class="img img-fluid text-center"><img style="height: 180px;width: 280px;"
+                                src="../img/Kush_close.jpg" alt=""></td>
+                    </tr>
+                </tbody>
+    </div>
+    </table><br>
+    <h3 id="res"></h3><br>
+    <button type="submit" class="btn btn-lg bg-success text-white text-right">Next</button></form>
+
+    <script>
+        const num1 = document.querySelector("#num1");
+        const num2 = document.querySelector("#num2");
+        const num3 = document.querySelector("#num3");
+        const resultElement = document.querySelector("#res");
+
+        num1.addEventListener("input", updateResult);
+        num2.addEventListener("input", updateResult);
+        num3.addEventListener("input", updateResult);
+
+        function updateResult() {
+            let total = 0;
+            if (num1.value) {
+                total += parseFloat(num1.value) * 8;
+            }
+            if (num2.value) {
+                total += parseFloat(num2.value) * 20;
+            }
+            if (num3.value) {
+                total += parseFloat(num3.value) * 30;
+            }
+            res.innerText = "Total: " + total + "$";
+        }
+    </script>
+    <footer class="bg-primary text-white fixed-bottom text-center">
+        <h5>Disclaimer: This page is for educational purposes only. All products and services on this page are false and fictitious.</h5>
+        <h5>Contact</h5>
+        <h6>Company: Open Black Camel</h6>
+        <h6>Protonmail: Openblmarket@protonmail.com</h6>
+        <h6>Monero
+            address:<br>888tNkZrPN6JsEgekjMnABU4TBzc2Dt29EPAvkRxbANs<br>AnjyPbb3iQ1YBRk1UXcdRsiKc9dhwMVgN5S9cQUiyoogDavup3H
+        </h6>
+    </footer>
+</body>
+
+</html>

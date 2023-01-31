@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="bg-dark">
+    <div class="container mt-3" style="text-align: center;">
+        <p class="h1 text-primary">Links hacia las paginas de los coches</p>
+        <div class="container mt-4">
+            <button id="boton" class="btn btn-lg btn-success"><img style="height: 100PX;"
+                    src="../img/BMW.png" alt="Bmw"></button>
+            <script>
+                document.getElementById("boton").addEventListener("click", function () {
+                    var spinner = '<div class="spinner-border" role="status"><span class="sr-only"></span></div>';
+                    document.getElementById("boton").innerHTML = spinner;
+                    setTimeout(function () {
+                        window.location.href = "https://www.bmw.es/es/coches-bmw/m/m5-berlina/2021/presentacion.html";
+                    }, 3000);
+                });
+            </script>
+            <button id="boton2" class="btn btn-lg btn-success"><img style="height: 100px;"
+                    src="../img/Dodge.png" alt=""></button>
+            <script>
+                document.getElementById("boton2").addEventListener("click", function () {
+                    var spinner = '<div class="spinner-border" role="status"><span class="sr-only"></span></div>';
+                    document.getElementById("boton2").innerHTML = spinner;
+                    setTimeout(function () {
+                        window.location.href = "https://www.dodge.com/es/";
+                    }, 3000);
+                });
+            </script>
+            <button id="boton3" class="btn btn-lg btn-success"><img style="height: 100px;"
+                    src="../img/porschr.webp" alt=""></button>
+            <script>
+                document.getElementById("boton3").addEventListener("click", function () {
+                    var spinner = '<div class="spinner-border" role="status"><span class="sr-only"></span></div>';
+                    document.getElementById("boton3").innerHTML = spinner;
+                    setTimeout(function () {
+                        window.location.href = "https://www.porsche.com/spain/models/panamera/panamera-models/panamera-turbo-s/";
+                    }, 3000);
+                });
+            </script>
+        </div>
+        <br><br><br>
+        <div style="display: flex;justify-content: space-between;"><a class="btn btn-success btn-lg"
+                href="index.html">Página anterior</a>
+            <a class="btn btn-success btn-lg" href="pagina3.html">Siguiente página</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
